@@ -3,9 +3,53 @@
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
 
+/*responsive nav bar functions an design */
+nav.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3c3d3d;
+}
+/*commenting */
+nav.navbar li {float: left;}
+
+nav.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav.navbar li a:hover:not(.active) {
+  background-color: #494949;
+}
+
+ul.navbar li.right {float: right;}
+
+/*nav.navbar li a.active {background-color: #3c3d3d;}*/
+.active {
+  background-color: #494949;
+}
+
+/* change the nav bar layout once the screen gets smallere then 600px*/
+@media screen and (max-width: 600px) {
+  /*applies to screen smaller then 600px */
+  nav.navbar li.right,
+  nav.navbar li {float: none;}
+  body {
+    background: #5f6060;
+  }
+}
+
 body {
-  background: #fcc;
-} 
+  margin: 0;
+  font-family: Avenir, Helveltica, Arial, san-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+}
 
 
 
@@ -14,10 +58,10 @@ body {
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
-  
+
   body {
-    background: #cfc;
-  } 
+    background: #5f6060;
+  }
 }
 
 
@@ -29,6 +73,6 @@ body {
   /* applies to screens wider than 999px */
 
   body {
-    background: #ccf;
-  } 
+    background: #5f6060;
+  }
 }
