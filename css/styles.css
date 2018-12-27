@@ -106,17 +106,44 @@ img {
   display: table;
 }
 
+ul {
+  list-style-type: none;
+  display: table;
+  width: 90%;
+  border-spacing: 0 10px;
+}
+
+li{
+  display: table-row;
+}
+
+li strong, li .txt, li .langs {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+li .txt {
+  width: 60%;
+  padding-right: 10px;
+}
+
+li .txt {
+  width: 60%;
+  padding-right: 10px;
+}
+
+li:nth-child(even) {
+  /*background: #eee;*/
+}
+
 footer {
   grid-area: footer;
   background: #3c3d3d;
 }
 
 /* TABLET STYLES */
-
 @media screen and (min-width: 500px) {
-
   /* applies to screens wider than 499px */
-
   body {
     background: #5f6060;
   }
@@ -130,14 +157,9 @@ footer {
   }
 }
 
-
-
 /* DESKTOP STYLES */
-
 @media screen and (min-width: 1000px) {
-
   /* applies to screens wider than 999px */
-
   body {
     background: #5f6060;
   }
