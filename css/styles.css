@@ -11,7 +11,7 @@ nav.navbar {
   overflow: hidden;
   background-color: #3c3d3d;
 }
-/*commenting */
+
 nav.navbar li {float: left;}
 
 nav.navbar li a {
@@ -28,9 +28,12 @@ nav.navbar li a:hover:not(.active) {
 
 ul.navbar li.right {float: right;}
 
-/*nav.navbar li a.active {background-color: #3c3d3d;}*/
 .active {
   background-color: #494949;
+}
+
+.logo {
+  background-color: black;
 }
 
 /* change the nav bar layout once the screen gets smallere then 600px*/
@@ -43,6 +46,7 @@ ul.navbar li.right {float: right;}
   }
 }
 
+
 body {
   margin: 0;
   font-family: Avenir, Helveltica, Arial, san-serif;
@@ -51,14 +55,12 @@ body {
   color: #fff;
 }
 
+/*
 div > * {
   padding: 1em;
   box-sizing: border-box;
 }
-
-header h1 {
-  margin: 0;
-}
+*/
 
 header {
   background: #3c3d3d;
@@ -67,7 +69,6 @@ header {
   /*grid-area: header;*/
 }
 
-/*grid testing */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -82,8 +83,54 @@ main {
   grid-area: content;
 }
 
+/*css animation welcome banner*/
+div.animation {
+  width: 100px;
+  height: 35px;
+  background-color: red;
+  position: relative;
+  animation-name: welcome;
+  animation-duration: 15s;
+  margin: auto;
+}
+
+@keyframes welcome {
+  0% {background-color: red; left:0px; top:0px;}
+  25% {background-color: yellow; left:1300px; top:0px;}
+  50% {background-color: green; left:0px; top:0px;}
+  75% {background-color: blue; left:1300px; top:0px;}
+  100% {background-color: orange; left:0px; top:0px;}
+}
+
+p.welcome {
+  text-align: center;
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  padding: 0 5px;
+}
+
 h2 {
   text-align: center;
+  font-size: 20px;
+  padding: 0 5px;
+  font-style: none;
+}
+
+h3 {
+  text-align: center;
+  font-size: 12px;
+  padding: 0 5px;
+  font-style: none;
+}
+
+p {
+  text-align: center;
+  padding: 0 5px;
+  font-size: 12px;
 }
 
 img {
@@ -92,48 +139,6 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.img-box {
-  float: left;
-  width: 33%;
-  padding: 5px;
-}
-
-.flexbox::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-ul {
-  list-style-type: none;
-  display: table;
-  width: 90%;
-  border-spacing: 0 10px;
-}
-
-li{
-  display: table-row;
-}
-
-li strong, li .txt, li .langs {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-li .txt {
-  width: 60%;
-  padding-right: 10px;
-}
-
-li .txt {
-  width: 60%;
-  padding-right: 10px;
-}
-
-li:nth-child(even) {
-  /*background: #eee;*/
 }
 
 footer {
@@ -150,7 +155,7 @@ footer {
 
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:200vh 20vh;
+    grid-template-rows:100vh 20vh;
     grid-template-areas:
       "content content content"
       "footer  footer  footer";

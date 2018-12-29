@@ -1,13 +1,15 @@
 //display hello message when the website loads up
-console.log("hello");
+console.log("welcome");
 
 //function to display a pop up message when clicking onto the BlackOps4 Download images
 function greeting() {
-  alert("Hello");
-  hello.textContent = "Goodbye";
+  alert("Welcome");
+  welcome.textContent = "Your daily feed for the latest games";
 }
 
-hello.addEventListener("click", greeting);
+welcome.addEventListener("click", greeting);
+
+"use strict";
 
 //search bar
 (function(){
@@ -92,3 +94,21 @@ hello.addEventListener("click", greeting);
     ev.preventDefault();
   }, false);
 }());
+
+
+
+//slide show
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.lentgh) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000);
+}
