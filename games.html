@@ -9,57 +9,113 @@
 </head>
 
 <body>
-<head>
-<!-- responsive nav bar -->
-  <nav id="navbar "class="navbar">
-    <li><a class="logo">GAME stop</a></li>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="games.html" class="active">Games</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </nav>
-</head>
+  <head>
+  <!-- responsive nav bar -->
+    <nav id="navbar "class="navbar">
+      <li><a class="logo">GAME stop</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="games.html" class="active">Games</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </nav>
+  </head>
 
   <div class="grid">
     <main>
 
-      <div class="brand">
-        <h1>NEWS</h1>
-        <p>Keep up to date with the latest games and releases</p>
+      <h1>GAMES</h1>
+      <h2>Whats Hot!</h2>
+
+      <div class="home_img">
+        <img src="images/Black-Ops-4.jpg" alt="Black Ops 4" width="1240" height="160" style="width:100%;">
       </div>
 
-      <div style="max-width:500px">
-        <img class="mySlides" src="images/BlackOps4.jpg" style="width:100%">
-        <img class="mySlides" src="images/rdr2.jpg" style="width:100%">
-        <img class="mySlides" src="images/FIFA19.jpg" style="width:100%">
-
-        <button onclick="plusDivs(-1)">&#10094;</button>
-        <button onclick="plusDivs(1)">&#10095;</button>
-
+      <div class="flex-container">
+        <div>
+          <a href="games.html">
+          <img src="images/FIFA19.jpg" alt="Games" width="295" height="250" style="width:100%;">
+          </a>
+        </div>
+        <div>
+          <a href="news.html">
+          <img src="images/rdr2.jpg" alt="News" width="295" height="250" style="width:100%;">
+          </a>
+        </div>
+        <div>
+          <a href="contact.html">
+          <img src="images/BlackOps4.jpg" alt="Contact" width="295" height="250" style="width:100%;">
+          </a>
+        </div>
       </div>
 
+      <h4>Top Best Selling Games:</h4>
+      <ol>
+        <li>Grand Theft Auto V</li>
+        <li>Mario Kart 8</li>
+        <li>Naruto To Boruto: Shinobi Striker</li>
+        <li>Tom Clancy's Rainbow Six: Siege.</li>
+        <li>Crash Bandicoot: N. Sane Trilogy</li>
+        <li>Super Mario Odyssey</li>
+        <li>The Legend of Zelda: Breath of the Wild</li>
+        <li>Minecraft</li>
+      </ol>
 
+      <h4>Top 10 Best Selling Games 2018:</h4>
+        <ol>
+          <li>Marvel's Spider-Man</li>
+          <li>NBA 2K19</li>
+          <li>Assassin's Creed: Odyssey</li>
+          <li>FIFA 19</li>
+          <li>Shadow Of The Tomb Raider</li>
+          <li>Madden NFL 19^</li>
+          <li>Forza Horizon 4</li>
+          <li>Destiny 2</li>
+          <li>Super Mario Party</li>
+          <li>NHL 19</li>
+        </ol>
 
+      <h4>Latest Releases:</h4>
+        <ol>
+          <li>FIFA 19</li>
+          <li>Black Ops 4</li>
+          <li>Spider Man</li>
+          <li>Red Dead Redemption 2</li>
+        </ol>
 
+        </div>
 
-
-
-      <!-- json ajax search form placeholder-->
+      <!-- json ajax search form placeholder
       <form id="searchForm">
         <label for="wikiQuery">Search Wikipedia for: </label>
-        <input id="wikiQuery" type="text" placeholder="best video games">
+        <input id="wikiQuery" type="text" placeholder="games">
         <input type="submit">
       </form>
 
       <ul id="demo"></ul>
 
+      <script src="js/scripts.js"></script>
+-->
     </main>
 
     <footer>
       <h3>GAME Stop</h3>
       <p>Email: gamestop@gmail.com </p>
       <p>Tel: 07545372685 </p>
-      <img src="images/social_media.jpg" alt="Social Media" width="100" height="100">
+      <div class="flex-container">
+        <div></div> <!-- create space between margin and flex box images-->
+        <div></div>
+        <div>
+          <img src="images/twitter.png" alt="Social Media" width="30" height="30">
+        </div>
+        <div>
+          <img src="images/facebook.png" alt="Social Media" width="30" height="30">
+        </div>
+        <div>
+          <img src="images/instagram.png" alt="Social Media" width="30" height="30">
+        </div>
+        <div></div>
+        <div></div>
+      </div>
     </footer>
   </div>
 

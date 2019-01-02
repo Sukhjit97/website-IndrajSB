@@ -91,7 +91,6 @@ div.animation {
   position: relative;
   animation-name: welcome;
   animation-duration: 15s;
-  margin: auto;
 }
 
 @keyframes welcome {
@@ -141,6 +140,44 @@ p.welcome {
   width: 100%;
   padding: 20px;
 }
+
+/*
+fieldset{
+  background: blue;
+}
+
+ul {
+  list-style-type: none;
+  display: table;
+  width: 90%;
+  border-spacing: 0 10px;
+}
+
+li {
+  display: table-row;
+}
+
+li strong, li .txt, li .langs {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+img {
+  display: table-cell;
+  padding-right: 10px;
+}
+
+li .txt {
+  width: 60%;
+  padding-right: 10px;
+}
+
+li:nth-child(even) {
+  background: #eee;
+}
+*/
+
+
 
 h1 {
   text-align: center;
@@ -194,7 +231,7 @@ footer {
 
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:200vh 20vh;
+    grid-template-rows:500vh 20vh;
     grid-template-areas:
       "content content content"
       "footer  footer  footer";
