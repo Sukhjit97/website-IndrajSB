@@ -177,7 +177,44 @@ li:nth-child(even) {
 }
 */
 
+.container {
+  position: relative;
+  width: 50%;
+}
 
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*center align text in the image*/
+  text-align: center;
+  line-height: normal;
+}
 
 h1 {
   text-align: center;
@@ -194,18 +231,19 @@ h2 {
 
 h3 {
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
   padding: 0 5px;
   font-style: none;
-}
-
-h4 {
-
+  background-color: #3c3d3d;
 }
 
 p {
   text-align: center;
   padding: 0 5px;
+  font-size: 12px;
+}
+
+ol {
   font-size: 12px;
 }
 
@@ -231,7 +269,7 @@ footer {
 
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:500vh 20vh;
+    grid-template-rows:300vh 20vh;
     grid-template-areas:
       "content content content"
       "footer  footer  footer";
