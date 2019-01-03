@@ -9,7 +9,7 @@ For the main layout I have used CSS grid with header, content section and footer
 On the homepage I have created a css animation that displays a welcome message. To help me do this I used w3schools guide https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation3.
 
 
-
+I have created image hover overlay that displays text on top of the image. To do this I carried out research using https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade from w3schools.
 
 
 
