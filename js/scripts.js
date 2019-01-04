@@ -1,31 +1,16 @@
-//display hello message when the website loads up
-console.log("welcome");
-
-//function to display a pop up message when clicking onto the BlackOps4 Download images
-function greeting() {
-  alert("Welcome");
-  welcome.textContent = "Your daily feed for the latest games";
-}
-
-welcome.addEventListener("click", greeting);
-
-
-
-
-//search bar
-//"use strict";
+"use strict";
 
 (function(){
-  // creates a new object called xhr
-  // which will handle the API call
+  //creates a new object called xhr
+  //which will handle the API call
   let xhr = new XMLHttpRequest();
-  // console.log(`Current readyState: ${xhr.readyState}`);
+  //console.log(`Current readyState: ${xhr.readyState}`);
 
   let queryBox = document.getElementById("wikiQuery");
   let searchForm = document.getElementById("searchForm");
   let demoJSON = document.getElementById("demo");
 
-  // constructs the base for the request url
+  //constructs the base for the request url
   let baseURL = "https://en.wikipedia.org/w/api.php? \
                 format=json& \
                 action=query& \
@@ -44,23 +29,15 @@ welcome.addEventListener("click", greeting);
                 origin=*& \
                 gsrsearch=";
 
-/*
-API Sandbox url
-https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&format=json&generator=search&prop=extracts%7Clanglinks%7Cpageimages&gsrlimit=10&gsrnamespace=0&exintro&explaintext&exsentences=1&exlimit=max&llprop=url&lllimit=max&piprop=thumbnail|name&origin=*&gsrsearch=kittens
-Request url
-https://en.wikipedia.org/w/api.php?action=query&format=json&generator=search&prop=extracts%7Clanglinks%7Cpageimages&gsrlimit=10&gsrnamespace=0&exintro&explaintext&exsentences=1&exlimit=max&llprop=url&lllimit=max&piprop=thumbnail|name&origin=*&gsrsearch=kittens
-*/
-
   function gatherData(data) {
-    // console.log(data);
-    // initialise some variables
+    //initialise some variables
     let theData = "";
     let langLinks = "";
     let img = "<img>";
-    const languages = [];
+    const languages = ["en", "de", "zh", "fr", "es", "ja", "ar", "ko", "el"];
     let k;
     let key;
-    // loop through the result pages by pageid
+    //loop through the result pages by pageid
     for(key in data.query.pages) {
       let tmp = data.query.pages[key];
       if (tmp.thumbnail) {
@@ -79,29 +56,45 @@ https://en.wikipedia.org/w/api.php?action=query&format=json&generator=search&pro
     demoJSON.innerHTML = theData;
   }
 
-  // the API call is triggered once the user submits a query
+  //the API call is triggered when the user submits query
   searchForm.addEventListener("submit", function(ev){
-    // complete the request url
+    //complete the request url
     let wiki = baseURL + queryBox.value;
-    // open a connection to the requested API url
+    //open a connection to the requested API url
     xhr.open("GET", wiki, true);
-    // be polite to Wikipedia
+    //be polite to Wikipedia
     xhr.setRequestHeader('Api-User-Agent', 'Example/1.0');
-    // send off that request
+    //send off that request
     xhr.send();
-    // if the response was ok, handle the response data using the gatherData function
+    //if the response was ok, handle the response data using the gatherData function
     xhr.onreadystatechange = function() {
-      // console.log(`Current readyState: ${xhr.readyState}`);
+      //console.log(`Current readyState: ${xhr.readyState}`);
       if (xhr.readyState === 4 && xhr.status === 200) {
-        // parse the response JSON
+        //parse the response JSON
         let response = JSON.parse(xhr.responseText);
-        // deal with the parsed JSON data
+        //deal with the parsed JSON data
         gatherData(response);
       }
     };
-    // clear the search box
+    //clear the search box
     queryBox.value = "";
     ev.preventDefault();
   }, false);
 
 }());
+
+
+
+
+
+
+//display hello message when the website loads up
+console.log("welcome");
+
+//function to display a pop up message when clicking onto the BlackOps4 Download images
+function greeting() {
+  alert("Welcome");
+  welcome.textContent = "Your daily feed for the latest games";
+}
+
+welcome.addEventListener("click", greeting);
