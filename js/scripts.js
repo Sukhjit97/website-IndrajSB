@@ -1,3 +1,44 @@
+//local storage
+(function(){
+
+  const myName = document.getElementById("my-name");
+  const getName = document.getElementById("get-name");
+  const userName = document.getElementById("user-name");
+  let nameStored = localStorage.getItem('name');
+
+  if(nameStored) {
+    //if there is a name with the local storage, use it:
+    //display the name
+    console.log(`Name on page load: ${nameStored}`);
+    myName.innerText = `again ${nameStored}`;
+    console.log(`Name stored is: ${nameStored}`);
+  }
+  else {
+    //if there is no name in the local storage
+    myName.innerText = "stranger";
+    console.log(`No name stored`);
+  }
+
+  function PerformGreeting(ev) {
+    ev.preventDefault();
+    if(userName.value === "") {
+      alert("Please enter a name");
+      userName.focus();
+    }
+    //gets the name the user has entered
+    nameStored = userName.value;
+    //shows the name
+    myName.innerText = nameStored;
+    //puts the name into localStorage
+    localStorage.setItem('name', nameStored);
+    //display the name in the console once it has been successfully entered
+    console.log(`New name stored: ${nameStored}`);
+  }
+
+  getName.addEventListener("submit", PerformGreeting);
+}());
+
+//wiki search bar
 "use strict";
 
 (function(){
@@ -85,11 +126,10 @@
 
 
 
-
-
-
 //display hello message when the website loads up
 console.log("welcome");
+
+
 
 //function to display a pop up message when clicking onto the BlackOps4 Download images
 function greeting() {

@@ -3,7 +3,23 @@
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
 
+body {
+  margin: 0;
+  font-family: Avenir, Helveltica, Arial, san-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+
+  animation-name: backgroundChange;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
 /*responsive nav bar functions an design */
+
+/*main nav bar settings and color scheme */
 nav.navbar {
   list-style-type: none;
   margin: 0;
@@ -12,8 +28,10 @@ nav.navbar {
   background-color: #3c3d3d;
 }
 
+/*nav bar contents left aligned*/
 nav.navbar li {float: left;}
 
+/*text format of nav bar*/
 nav.navbar li a {
   display: block;
   color: white;
@@ -22,16 +40,19 @@ nav.navbar li a {
   text-decoration: none;
 }
 
+/*when hover over the nav bar tabs, chnage the colour to ight grey*/
 nav.navbar li a:hover:not(.active) {
   background-color: #494949;
 }
 
 ul.navbar li.right {float: right;}
 
+/*selected tab colour*/
 .active {
   background-color: #494949;
 }
 
+/*game stop logo within the nav bar background colour*/
 .logo {
   background-color: black;
 }
@@ -46,27 +67,10 @@ ul.navbar li.right {float: right;}
   }
 }
 
-
-body {
-  margin: 0;
-  font-family: Avenir, Helveltica, Arial, san-serif;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #fff;
-}
-
-/*
-div > * {
-  padding: 1em;
-  box-sizing: border-box;
-}
-*/
-
 header {
   background: #3c3d3d;
   padding: 0.25em;
   text-align: center;
-  /*grid-area: header;*/
 }
 
 .grid {
@@ -85,20 +89,33 @@ main {
 
 /*css animation welcome banner*/
 div.animation {
-  width: 100px;
-  height: 35px;
-  background-color: red;
   position: relative;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 130px;
+  height: 35px;
+  padding: 0 1em;
+  background-color: red;
   animation-name: welcome;
-  animation-duration: 15s;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes welcome {
-  0% {background-color: red; left:0px; top:0px;}
-  25% {background-color: yellow; left:1300px; top:0px;}
-  50% {background-color: green; left:0px; top:0px;}
-  75% {background-color: blue; left:1300px; top:0px;}
-  100% {background-color: orange; left:0px; top:0px;}
+  0% {background-color:rgb(255, 0, 0); left:0px; top:0px;}
+  25% {background-color:rgb(255, 165, 0); left:1300px; top:0px;}
+  50% {background-color:rgb(64, 224, 208); left:0px; top:0px;}
+  75% {background-color:rgb(147, 112, 216); left:1300px; top:0px;}
+  100% {background-color:rgb(255, 0, 0);left:0px; top:0px;}
+}
+
+@@keyframes backgroundChange {
+  0% {background-color:rgb(255, 225, 225); }
+  50% {background-color:rgb(25, 25, 25); }
+  100% {background-color:rgb(255, 225, 225); }
 }
 
 p.welcome {
@@ -119,6 +136,7 @@ p.welcome {
   text-align: center;
   line-height: 100px;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -188,33 +206,38 @@ ul {
   border-spacing: 0 10px;
 }
 
-li {
+
+li.table {
   display: table-row;
+  display: table-column;
 }
+
 
 li strong, li .txt, li .langs {
   display: table-cell;
   vertical-align: middle;
 }
 
-img {
-  display: table-cell;
-  padding-right: 10px;
-}
 
 li .txt {
   width: 60%;
   padding-right: 10px;
 }
 
-li:nth-child(even) {
-  background: #eee;
+
+
+.get-name {
+  padding: 0.5em;
 }
 
+input.feedback {
+  height: 100px;
+  width: 80%;
+}
 
-
-
-
+input.name {
+  width: 80%;
+}
 
 h1 {
   text-align: center;
@@ -235,6 +258,13 @@ h3 {
   padding: 0 5px;
   font-style: none;
   background-color: #3c3d3d;
+}
+
+h4 {
+  text-align: left;
+  font-size: 12px;
+  padding: 0 5px;
+  font-style: none;
 }
 
 p {
@@ -259,6 +289,9 @@ footer {
   grid-area: footer;
   background: #3c3d3d;
 }
+
+
+
 
 /* TABLET STYLES */
 @media screen and (min-width: 500px) {

@@ -16,7 +16,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="games.html" class="active">Games</a></li>
       <li><a href="news.html">News</a></li>
-      <li><a href="search_games.html">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </nav>
   </head>
 
@@ -88,15 +88,6 @@
               <li>Metal Gear Solid</li>
             </ol>
 
-        <h3>Shooter</h3>
-            <ol>
-              <li>Call of Duty: WWII</li>
-              <li>Call of Duty: Black Ops</li>
-              <li>Counter Strike</li>
-              <li>Battlefield</li>
-              <li>Overwatch</li>
-            </ol>
-
         <h3>Fighting</h3>
             <ol>
               <li>Tekken 3</li>
@@ -114,6 +105,17 @@
               <li>Forza</li>
               <li>F1 2018</li>
             </ol>
+
+        <form id="searchForm">
+          <h3><label for="wikiQuery">Want to find out more about games? Search Wikipedia for: </label>
+          <input id="wikiQuery" type="text" placeholder="games">
+          <input type="submit"></h3>
+        </form>
+
+        <div id="results">
+          <ul id="demo"></ul>
+        </div>
+
     </main>
 
     <footer>
