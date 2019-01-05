@@ -308,7 +308,7 @@ footer {
 
   .grid {
     grid-template-columns: 1fr 1fr 1fr; /*columns for each section in the grid*/
-    grid-template-rows:300vh 20vh; /*amount of rows/spacing in each section*/
+    grid-template-rows:400vh 20vh; /*amount of rows/spacing in each section*/
     grid-template-areas: /*areas of the css grid */
       "content content content"
       "footer  footer  footer";
