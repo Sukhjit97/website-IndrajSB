@@ -2,7 +2,8 @@
 
 This is very basic boilerplate code for you to get started with.
 
-[w3schools, Responsive Topnav] (https://www.w3schools.com/css/css_navbar.asp) I have used this resource to help me understand and see how to develop a navigation bar that adjust itself in comparison to the screen size.
+[w3schools, Responsive Topnav] (https://www.w3schools.com/css/css_navbar.asp)
+I have used this resource to help me understand and see how to develop a navigation bar that adjust itself in comparison to the screen size.
 
 For the main layout I have used CSS grid with header, content and footer sections.
 
@@ -20,3 +21,5 @@ I have created a image hover overlay that displays text over the images when hov
 
 [07-lab-json-ajax] (https://github.com/CTEC3905/07-lab-json-ajax)
 I have crated a wiki search facility within the games.html using JSON ajax and xmlh http requests. In order to do this, i used the lab work to create the wiki search facility.
+
+To show my understanding of the HTML5, CSS and JavaScript functions and code, I have inserted comments stating what the functions do and how they work.

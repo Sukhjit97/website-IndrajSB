@@ -20,6 +20,7 @@
     </nav>
   </head>
 
+  <!--css grid to store content -->
   <div class="grid">
     <main>
       <h1>GAMES</h1>
@@ -29,6 +30,7 @@
         <img src="images/Black-Ops-4.jpg" alt="Black Ops 4" style="width:100%;">
       </div>
 
+      <!--flex box to store images that are linked to an external soruce -->
       <div class="flex-container">
         <div class="container">
           <a href="https://www.playstation.com/en-gb/games/ea-sports-fifa-19-ps4/">
@@ -58,54 +60,57 @@
         </div>
       </div>
 
+      <!-- content header and paragraph -->
       <p>Which games do you like? There aren’t just games for on audience,
         there is a wide range of genres to choose from that suit your needs.</p>
 
       <h3>Action</h3>
+        <!-- ordered list listing object in numerical order-->
+        <ol>
+          <li>Assassin’s Creed</li>
+          <li>Grand Theft Auto V </li>
+          <li>Fortnite</li>
+          <li>Fallout 4</li>
+          <li>Red Dead Redemption</li>
+        </ol>
+
+      <h3>Sports</h3>
           <ol>
-            <li>Assassin’s Creed</li>
-            <li>Grand Theft Auto V </li>
-            <li>Fortnite</li>
-            <li>Fallout 4</li>
-            <li>Red Dead Redemption</li>
+            <li>FIFA 19</li>
+            <li>WWE 2K</li>
+            <li>NBA 2K19</li>
+            <li>Tony Hawk’s</li>
+            <li>EA Sports UFC 3</li>
           </ol>
 
-        <h3>Sports</h3>
-            <ol>
-              <li>FIFA 19</li>
-              <li>WWE 2K</li>
-              <li>NBA 2K19</li>
-              <li>Tony Hawk’s</li>
-              <li>EA Sports UFC 3</li>
-            </ol>
+      <h3>Adventure</h3>
+          <ol>
+            <li>Spider-Man</li>
+            <li>Tomb Raider</li>
+            <li>God of War</li>
+            <li>Batman: Arkham City</li>
+            <li>Metal Gear Solid</li>
+          </ol>
 
-        <h3>Adventure</h3>
-            <ol>
-              <li>Spider-Man</li>
-              <li>Tomb Raider</li>
-              <li>God of War</li>
-              <li>Batman: Arkham City</li>
-              <li>Metal Gear Solid</li>
-            </ol>
+      <h3>Fighting</h3>
+          <ol>
+            <li>Tekken 3</li>
+            <li>Dragon Ball Fighter Z</li>
+            <li>Street Fighter II: The World Warrior</li>
+            <li>Mortal Kombat X</li>
+            <li>Injustice 2</li>
+          </ol>
 
-        <h3>Fighting</h3>
-            <ol>
-              <li>Tekken 3</li>
-              <li>Dragon Ball Fighter Z</li>
-              <li>Street Fighter II: The World Warrior</li>
-              <li>Mortal Kombat X</li>
-              <li>Injustice 2</li>
-            </ol>
+      <h3>Racing</h3>
+          <ol>
+            <li>Grand Turismo Sport</li>
+            <li>Need for Speed</li>
+            <li>Dirt Rally</li>
+            <li>Forza</li>
+            <li>F1 2018</li>
+          </ol>
 
-        <h3>Racing</h3>
-            <ol>
-              <li>Grand Turismo Sport</li>
-              <li>Need for Speed</li>
-              <li>Dirt Rally</li>
-              <li>Forza</li>
-              <li>F1 2018</li>
-            </ol>
-
+        <!-- Wikipedia search box using JavaScript JSON ajax -->
         <form id="searchForm">
           <h3><label for="wikiQuery">Want to find out more about games? Search Wikipedia for: </label>
           <input id="wikiQuery" type="text" placeholder="games">
@@ -115,9 +120,9 @@
         <div id="results">
           <ul id="demo"></ul>
         </div>
-
     </main>
 
+    <!-- footer placeholder for conact information and socil media-->
     <footer>
       <h3>GAME Stop</h3>
       <p>Email: gamestop@gmail.com </p>
@@ -144,6 +149,7 @@
     </footer>
   </div>
 
-  <script src="js/scripts.js"></script>
+  <!--JavaScript file linked to this webpage -->
+  <script src="js/xmlhttp.js"></script>
 </body>
 </html>

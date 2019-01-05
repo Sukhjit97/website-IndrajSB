@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <head>
+  <header>
   <!-- responsive nav bar -->
     <nav id="navbar "class="navbar">
       <li><a class="logo">GAME stop</a></li>
@@ -18,16 +18,17 @@
       <li><a href="news.html">News</a></li>
       <li><a href="contact.html">Contact</a></li>
     </nav>
-  </head>
+  </header>
 
+  <!--css grid to store content -->
   <div class="grid">
     <main>
-      <!--<h2>Introducing the best-selling action game… Black Ops 4</h2>-->
       <div class="heading">
         <h1>GAME stop</h1>
-        <h2 id="welcome">Welcome to GAME stop</h2>
+        <h2 id="welcome">Welcome to GAME stop (click here for more)</h2>
       </div>
 
+      <!-- css animation welcome message -->
       <div class="animation">
         <p class="welcome">Welcome</p>
       </div>
@@ -36,10 +37,11 @@
         <img src="images/black-opps.jpg" alt="Black Ops 4" width="1240" height="160" style="width:100%;">
       </div>
 
+      <!--flex box to store images that are linked to an external soruce -->
       <div class="flex-container">
         <div class="container">
           <a href="games.html">
-          <img src="images/games.png" alt="Games" width="295" height="200" style="width:100%;">
+          <img src="images/games.png" alt="Games" style="width:100%;">
           <div class="overlay">
             <div class="text">Games</div>
           </div>
@@ -48,7 +50,7 @@
 
         <div class="container">
           <a href="news.html">
-          <img src="images/news.png" alt="News" width="295" height="200" style="width:100%;">
+          <img src="images/news.png" alt="News" style="width:100%;">
           <div class="overlay">
             <div class="text">News</div>
           </div>
@@ -57,7 +59,7 @@
 
         <div class="container">
           <a href="contact.html">
-          <img src="images/contact.png" alt="Games" width="295" height="200" style="width:100%;">
+          <img src="images/contact.png" alt="Games" style="width:100%;">
           <div class="overlay">
             <div class="text">Contact</div>
           </div>
@@ -65,6 +67,7 @@
         </div>
       </div>
 
+      <!-- content header and paragraph -->
       <h3>About Us</h3>
       <p>Game stop is a website that brings the gaming community together.
         Keeping the gaming community regularly updated with the latest game releases
@@ -73,10 +76,9 @@
         latest developments.</p>
       <p>Also, why not contact us and provide us with feedback by filling out
         our user feedback form. We are always looking for your views and improvements.</p>
-
-
     </main>
 
+    <!-- footer placeholder for conact information and socil media-->
     <footer>
       <h3>GAME Stop</h3>
       <p>Email: gamestop@gmail.com </p>
@@ -103,6 +105,8 @@
     </footer>
   </div>
 
-  <script src="js/scripts.js"></script>
+  <!--JavaScript file linked to this webpage -->
+  <script src="js/popupmessage.js"></script>
+
 </body>
 </html>

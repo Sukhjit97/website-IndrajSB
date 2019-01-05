@@ -20,6 +20,7 @@
     </nav>
   </head>
 
+  <!--css grid to store content -->
   <div class="grid">
     <main>
       <h1>NEWS</h1>
@@ -29,6 +30,7 @@
         <img src="images/psplus.jpg" alt="PlayStation" width="1240" height="160" style="width:100%;">
       </div>
 
+      <!--flex box to store images that are linked to an external soruce -->
       <div class="flex-container">
         <div class="container">
           <img src="images/psplusnews.jpg" alt="PS Plus" style="width:100%;" >
@@ -52,36 +54,50 @@
         </div>
       </div>
 
+      <!-- content header and paragraph -->
       <p>Latest News and Updates about next gen consoles and more</p>
 
       <h3>PS Plus Latest Releases</h3>
-      <ol>
-        <li>Portal Knights</li>
-        <li>Fallen Legion: Flames of the Rebellion</li>
-        <li>Steep</li>
-        <li>Zone of the Enders HD Collection</li>
-        <li>Amplitude</li>
-        <li>Super Mutant Alien Assault</li>
-      </ol>
+        <!-- ordered list listing object in numerical order-->
+        <ol>
+          <li>Portal Knights</li>
+          <li>Fallen Legion: Flames of the Rebellion</li>
+          <li>Steep</li>
+          <li>Zone of the Enders HD Collection</li>
+          <li>Amplitude</li>
+          <li>Super Mutant Alien Assault</li>
+        </ol>
 
       <h3>Fortnite Updates</h3>
-      <ol>
-        <li>New Season 8 Release Date: February 28 2019</li>
-        <li>New Skins</li>
-        <li>New Themes</li>
-        <li>More map changes</li>
-      </ol>
+        <ol>
+          <li>New Season 8 Release Date: February 28 2019</li>
+          <li>New Skins</li>
+          <li>New Themes</li>
+          <li>More map changes</li>
+        </ol>
 
       <h3>Next-Gen Consoles</h3>
-      <ol>
-        <li>X Box Two</li>
-        <li>PS5</li>
-        <li>Controllers</li>
-        <li>Designs</li>
-        <li>Specs Update</li>
-      </ol>
+        <ol>
+          <li>X Box Two</li>
+          <li>PS5</li>
+          <li>Controllers</li>
+          <li>Designs</li>
+          <li>Specs Update</li>
+        </ol>
+
+      <!-- Wikipedia search box using JavaScript JSON ajax -->
+      <form id="searchForm">
+        <h3><label for="wikiQuery">Want to find out more about games? Search Wikipedia for: </label>
+        <input id="wikiQuery" type="text" placeholder="games">
+        <input type="submit"></h3>
+      </form>
+
+      <div id="results">
+        <ul id="demo"></ul>
+      </div>
     </main>
 
+    <!-- footer placeholder for conact information and socil media-->
     <footer>
       <h3>GAME Stop</h3>
       <p>Email: gamestop@gmail.com </p>
@@ -100,6 +116,7 @@
     </footer>
   </div>
 
-  <script src="js/scripts.js"></script>
-  </body>
-  </html>
+  <!--JavaScript file linked to this webpage -->
+  <script src="js/xmlhttp.js"></script>
+</body>
+</html>
