@@ -1,20 +1,17 @@
 /* MOBILE AND GLOBAL STYLES */
 
-/* applies to screens smaller than 500px (first breakpoint) */
-/* and above unless overwritten below */
-
 /*styles property for the main body of the webiste*/
 body {
   margin: 0; /*distance between content and end of the screen*/
   font-family: Avenir, Helveltica, Arial, san-serif; /*font type*/
   font-weight: bold; /*font size*/
-  font-size: 1rem; /*size of the font*/
+  font-size: 12px; /*size of the font*/
   color: #fff; /*colour of the font*/
 }
 
 /*responsive nav bar functions an design */
 /*main nav bar settings and color scheme */
-nav.navbar {
+menu.navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -23,10 +20,10 @@ nav.navbar {
 }
 
 /*nav bar contents left aligned*/
-nav.navbar li {float: left;}
+menu.navbar li {float: left;}
 
 /*text format of nav bar*/
-nav.navbar li a {
+menu.navbar li a {
   display: block;
   color: white;
   text-align: center;
@@ -34,12 +31,9 @@ nav.navbar li a {
   text-decoration: none;
 }
 
-/*when hover over the nav bar tabs, chnage the colour to ight grey*/
-nav.navbar li a:hover:not(.active) {
+menu a:hover {
   background-color: #494949;
 }
-
-ul.navbar li.right {float: right;}
 
 /*selected tab colour*/
 .active {
@@ -51,16 +45,6 @@ ul.navbar li.right {float: right;}
   background-color: black;
 }
 
-/* change the nav bar layout once the screen gets smallere then 600px*/
-@media screen and (max-width: 600px) {
-  /*applies to screen smaller then 600px */
-  nav.navbar li.right,
-  nav.navbar li {float: none;}
-  body {
-    background: #5f6060;
-  }
-}
-
 /*header colour and spacing*/
 header {
   background: #3c3d3d;
@@ -69,13 +53,13 @@ header {
 }
 
 /*css grid layout*/
-.grid {
+div.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas: /*areas in the grid to be configured with css*/
-    "content  content"
-    "footer   footer"
+    "content content"
+    "footer footer"
 }
 
 /*main content section of the css grid*/
@@ -95,7 +79,7 @@ div.animation {
   padding: 0 1em;
   background-color: red;
   animation-name: welcome;
-  animation-duration: 5s;
+  animation-duration: 30s;
   animation-iteration-count: 1;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
@@ -121,7 +105,6 @@ p.welcome {
 .flex-container {
   display: flex;
   flex-wrap: nowrap;
-  background-color: none;
   max-width: 100%;
 }
 
@@ -156,20 +139,6 @@ p.welcome {
   width: 100%;
   padding: 20px;
 }
-/*
-.container {
-  position: relative;
-  width: 50%;
-}
-*/
-
-/*
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-*/
 
 /*hovering affect */
 .overlay {
@@ -185,7 +154,7 @@ p.welcome {
   background-color: #3c3d3d;
 }
 
-/*how dark is the overlay text background*/
+/*background of the images chnages colour to display text*/
 .container:hover .overlay {
   opacity: 1;
 }
@@ -254,14 +223,12 @@ h2 {
   text-align: center;
   font-size: 20px;
   padding: 0 5px;
-  font-style: none;
 }
 
 h3 {
   text-align: center;
   font-size: 15px;
   padding: 0 5px;
-  font-style: none;
   background-color: #3c3d3d;
 }
 
@@ -269,7 +236,6 @@ h4 {
   text-align: left;
   font-size: 12px;
   padding: 0 5px;
-  font-style: none;
 }
 
 /*paragraph text format */
@@ -300,15 +266,20 @@ footer {
 }
 
 /* TABLET STYLES */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 100px) {
   /* applies to screens wider than 499px */
   body {
     background: #5f6060;
   }
 
+  /*when the screen size is wider than 99px, float the nav bar in the middle*/
+  menu.navbar li {
+    float: none;
+  }
+
   .grid {
     grid-template-columns: 1fr 1fr 1fr; /*columns for each section in the grid*/
-    grid-template-rows:400vh 20vh; /*amount of rows/spacing in each section*/
+    grid-template-rows:100vh 20vh; /*amount of rows/spacing in each section*/
     grid-template-areas: /*areas of the css grid */
       "content content content"
       "footer  footer  footer";
@@ -316,9 +287,12 @@ footer {
 }
 
 /* DESKTOP STYLES */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 500px) {
   /* applies to screens wider than 999px */
   body {
     background: #5f6060;
   }
+
+  /*when screen size is wider than 499px, float the nav bar at the top with elements aligned to the left*/
+  menu.navbar li {float: left;}
 }
